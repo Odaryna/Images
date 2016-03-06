@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ImagesTableVC.h
 //  Thumnails
 //
 //  Created by Admin on 3/4/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ImagesTableVC : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
-

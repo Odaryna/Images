@@ -9,13 +9,32 @@
 /* Begin PBXBuildFile section */
 		84E4C0B61C8A1F21003B9B4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4C0B51C8A1F21003B9B4C /* main.m */; };
 		84E4C0B91C8A1F21003B9B4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4C0B81C8A1F21003B9B4C /* AppDelegate.m */; };
-		84E4C0BC1C8A1F21003B9B4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4C0BB1C8A1F21003B9B4C /* ViewController.m */; };
+		84E4C0BC1C8A1F21003B9B4C /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4C0BB1C8A1F21003B9B4C /* ImageViewController.m */; };
 		84E4C0BF1C8A1F21003B9B4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E4C0BD1C8A1F21003B9B4C /* Main.storyboard */; };
 		84E4C0C21C8A1F21003B9B4C /* Thumnails.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84E4C0C01C8A1F21003B9B4C /* Thumnails.xcdatamodeld */; };
 		84E4C0C41C8A1F21003B9B4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E4C0C31C8A1F21003B9B4C /* Assets.xcassets */; };
 		84E4C0C71C8A1F21003B9B4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E4C0C51C8A1F21003B9B4C /* LaunchScreen.storyboard */; };
 		84E4C0D21C8A1F21003B9B4C /* ThumnailsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4C0D11C8A1F21003B9B4C /* ThumnailsTests.m */; };
 		84E4C0DD1C8A1F21003B9B4C /* ThumnailsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4C0DC1C8A1F21003B9B4C /* ThumnailsUITests.m */; };
+		84E4C0EC1C8A2263003B9B4C /* ImagesTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4C0EB1C8A2263003B9B4C /* ImagesTableVC.m */; };
+		84E4C0EF1C8A22C4003B9B4C /* ImagesCellVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E4C0EE1C8A22C4003B9B4C /* ImagesCellVC.m */; };
+		84ECBA391C8B47980093E7AD /* ImagesUrls.m in Sources */ = {isa = PBXBuildFile; fileRef = 84ECBA381C8B47980093E7AD /* ImagesUrls.m */; };
+		84ECBA3D1C8B7C4E0093E7AD /* bcf39e88-5731-43bb-9d4b-e5b3b2b1fdf2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84ECBA3A1C8B7C4E0093E7AD /* bcf39e88-5731-43bb-9d4b-e5b3b2b1fdf2.jpg */; };
+		84ECBA3E1C8B7C4E0093E7AD /* ca1b8c69-9ba4-4586-a6b7-fe3e6e2112de.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84ECBA3B1C8B7C4E0093E7AD /* ca1b8c69-9ba4-4586-a6b7-fe3e6e2112de.jpg */; };
+		84ECBA3F1C8B7C4E0093E7AD /* green_mountain_nature_wallpaper_hd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84ECBA3C1C8B7C4E0093E7AD /* green_mountain_nature_wallpaper_hd.jpg */; };
+		84ECBA561C8C60AF0093E7AD /* windows_7_download_library_ico_by_sdbinwiiexe-d3c9fb7.png in Resources */ = {isa = PBXBuildFile; fileRef = 84ECBA4E1C8C60AF0093E7AD /* windows_7_download_library_ico_by_sdbinwiiexe-d3c9fb7.png */; };
+		84EE4AE01C8C7EF1000C593F /* 4239015-images-of-nature.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84EE4ADF1C8C7EF1000C593F /* 4239015-images-of-nature.jpg */; };
+		84EE4AE71C8C7F09000C593F /* meadow_nature_summer_grass_sky_301_2560x1440.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84EE4AE11C8C7F09000C593F /* meadow_nature_summer_grass_sky_301_2560x1440.jpg */; };
+		84EE4AE81C8C7F09000C593F /* mountains_nature_sky_river_beautiful_scenery_93460_2560x1440.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84EE4AE21C8C7F09000C593F /* mountains_nature_sky_river_beautiful_scenery_93460_2560x1440.jpg */; };
+		84EE4AE91C8C7F09000C593F /* Parc-nature_de_la_Pointe-aux-Prairies_07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84EE4AE31C8C7F09000C593F /* Parc-nature_de_la_Pointe-aux-Prairies_07.jpg */; };
+		84EE4AEA1C8C7F09000C593F /* puppy_couple_sunset_nature_play_kids_1194_2560x1440.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84EE4AE41C8C7F09000C593F /* puppy_couple_sunset_nature_play_kids_1194_2560x1440.jpg */; };
+		84EE4AEB1C8C7F09000C593F /* summer_mountains_nature_lake_river_grass_93164_2560x1440.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84EE4AE51C8C7F09000C593F /* summer_mountains_nature_lake_river_grass_93164_2560x1440.jpg */; };
+		84EE4AEC1C8C7F09000C593F /* summer_nature_grass_beautiful_light_84335_3840x2160.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84EE4AE61C8C7F09000C593F /* summer_nature_grass_beautiful_light_84335_3840x2160.jpg */; };
+		84F039A61C8CE23400A07836 /* 4187330-pure-nature-hd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84F039A11C8CE23300A07836 /* 4187330-pure-nature-hd.jpg */; };
+		84F039A71C8CE23400A07836 /* City Wallpaper 14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84F039A21C8CE23300A07836 /* City Wallpaper 14.jpg */; };
+		84F039A81C8CE23400A07836 /* Nature-Spring-027.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84F039A31C8CE23300A07836 /* Nature-Spring-027.jpg */; };
+		84F039A91C8CE23400A07836 /* new-york-city-hd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84F039A41C8CE23400A07836 /* new-york-city-hd.jpg */; };
+		84F039AA1C8CE23400A07836 /* Skyline_oklahoma_city.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 84F039A51C8CE23400A07836 /* Skyline_oklahoma_city.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +59,8 @@
 		84E4C0B51C8A1F21003B9B4C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84E4C0B71C8A1F21003B9B4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84E4C0B81C8A1F21003B9B4C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		84E4C0BA1C8A1F21003B9B4C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		84E4C0BB1C8A1F21003B9B4C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		84E4C0BA1C8A1F21003B9B4C /* ImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		84E4C0BB1C8A1F21003B9B4C /* ImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		84E4C0BE1C8A1F21003B9B4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84E4C0C11C8A1F21003B9B4C /* Thumnails.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Thumnails.xcdatamodel; sourceTree = "<group>"; };
 		84E4C0C31C8A1F21003B9B4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +72,28 @@
 		84E4C0D81C8A1F21003B9B4C /* ThumnailsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThumnailsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E4C0DC1C8A1F21003B9B4C /* ThumnailsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThumnailsUITests.m; sourceTree = "<group>"; };
 		84E4C0DE1C8A1F21003B9B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84E4C0EA1C8A2263003B9B4C /* ImagesTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesTableVC.h; sourceTree = "<group>"; };
+		84E4C0EB1C8A2263003B9B4C /* ImagesTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesTableVC.m; sourceTree = "<group>"; };
+		84E4C0ED1C8A22C4003B9B4C /* ImagesCellVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesCellVC.h; sourceTree = "<group>"; };
+		84E4C0EE1C8A22C4003B9B4C /* ImagesCellVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesCellVC.m; sourceTree = "<group>"; };
+		84ECBA371C8B47980093E7AD /* ImagesUrls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesUrls.h; sourceTree = "<group>"; };
+		84ECBA381C8B47980093E7AD /* ImagesUrls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesUrls.m; sourceTree = "<group>"; };
+		84ECBA3A1C8B7C4E0093E7AD /* bcf39e88-5731-43bb-9d4b-e5b3b2b1fdf2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bcf39e88-5731-43bb-9d4b-e5b3b2b1fdf2.jpg"; sourceTree = "<group>"; };
+		84ECBA3B1C8B7C4E0093E7AD /* ca1b8c69-9ba4-4586-a6b7-fe3e6e2112de.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ca1b8c69-9ba4-4586-a6b7-fe3e6e2112de.jpg"; sourceTree = "<group>"; };
+		84ECBA3C1C8B7C4E0093E7AD /* green_mountain_nature_wallpaper_hd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green_mountain_nature_wallpaper_hd.jpg; sourceTree = "<group>"; };
+		84ECBA4E1C8C60AF0093E7AD /* windows_7_download_library_ico_by_sdbinwiiexe-d3c9fb7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "windows_7_download_library_ico_by_sdbinwiiexe-d3c9fb7.png"; sourceTree = "<group>"; };
+		84EE4ADF1C8C7EF1000C593F /* 4239015-images-of-nature.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "4239015-images-of-nature.jpg"; sourceTree = "<group>"; };
+		84EE4AE11C8C7F09000C593F /* meadow_nature_summer_grass_sky_301_2560x1440.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meadow_nature_summer_grass_sky_301_2560x1440.jpg; sourceTree = "<group>"; };
+		84EE4AE21C8C7F09000C593F /* mountains_nature_sky_river_beautiful_scenery_93460_2560x1440.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountains_nature_sky_river_beautiful_scenery_93460_2560x1440.jpg; sourceTree = "<group>"; };
+		84EE4AE31C8C7F09000C593F /* Parc-nature_de_la_Pointe-aux-Prairies_07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Parc-nature_de_la_Pointe-aux-Prairies_07.jpg"; sourceTree = "<group>"; };
+		84EE4AE41C8C7F09000C593F /* puppy_couple_sunset_nature_play_kids_1194_2560x1440.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = puppy_couple_sunset_nature_play_kids_1194_2560x1440.jpg; sourceTree = "<group>"; };
+		84EE4AE51C8C7F09000C593F /* summer_mountains_nature_lake_river_grass_93164_2560x1440.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = summer_mountains_nature_lake_river_grass_93164_2560x1440.jpg; sourceTree = "<group>"; };
+		84EE4AE61C8C7F09000C593F /* summer_nature_grass_beautiful_light_84335_3840x2160.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = summer_nature_grass_beautiful_light_84335_3840x2160.jpg; sourceTree = "<group>"; };
+		84F039A11C8CE23300A07836 /* 4187330-pure-nature-hd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "4187330-pure-nature-hd.jpg"; sourceTree = "<group>"; };
+		84F039A21C8CE23300A07836 /* City Wallpaper 14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "City Wallpaper 14.jpg"; sourceTree = "<group>"; };
+		84F039A31C8CE23300A07836 /* Nature-Spring-027.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Nature-Spring-027.jpg"; sourceTree = "<group>"; };
+		84F039A41C8CE23400A07836 /* new-york-city-hd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "new-york-city-hd.jpg"; sourceTree = "<group>"; };
+		84F039A51C8CE23400A07836 /* Skyline_oklahoma_city.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Skyline_oklahoma_city.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +146,17 @@
 			children = (
 				84E4C0B71C8A1F21003B9B4C /* AppDelegate.h */,
 				84E4C0B81C8A1F21003B9B4C /* AppDelegate.m */,
-				84E4C0BA1C8A1F21003B9B4C /* ViewController.h */,
-				84E4C0BB1C8A1F21003B9B4C /* ViewController.m */,
+				84E4C0EA1C8A2263003B9B4C /* ImagesTableVC.h */,
+				84E4C0EB1C8A2263003B9B4C /* ImagesTableVC.m */,
+				84E4C0ED1C8A22C4003B9B4C /* ImagesCellVC.h */,
+				84E4C0EE1C8A22C4003B9B4C /* ImagesCellVC.m */,
+				84E4C0BA1C8A1F21003B9B4C /* ImageViewController.h */,
+				84E4C0BB1C8A1F21003B9B4C /* ImageViewController.m */,
+				84ECBA371C8B47980093E7AD /* ImagesUrls.h */,
+				84ECBA381C8B47980093E7AD /* ImagesUrls.m */,
 				84E4C0BD1C8A1F21003B9B4C /* Main.storyboard */,
-				84E4C0C31C8A1F21003B9B4C /* Assets.xcassets */,
-				84E4C0C51C8A1F21003B9B4C /* LaunchScreen.storyboard */,
 				84E4C0C81C8A1F21003B9B4C /* Info.plist */,
-				84E4C0C01C8A1F21003B9B4C /* Thumnails.xcdatamodeld */,
+				84ECBA0B1C8B40880093E7AD /* Images */,
 				84E4C0B41C8A1F21003B9B4C /* Supporting Files */,
 			);
 			path = Thumnails;
@@ -120,6 +165,9 @@
 		84E4C0B41C8A1F21003B9B4C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84E4C0C31C8A1F21003B9B4C /* Assets.xcassets */,
+				84E4C0C01C8A1F21003B9B4C /* Thumnails.xcdatamodeld */,
+				84E4C0C51C8A1F21003B9B4C /* LaunchScreen.storyboard */,
 				84E4C0B51C8A1F21003B9B4C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -141,6 +189,37 @@
 				84E4C0DE1C8A1F21003B9B4C /* Info.plist */,
 			);
 			path = ThumnailsUITests;
+			sourceTree = "<group>";
+		};
+		84ECBA0B1C8B40880093E7AD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				84F039A11C8CE23300A07836 /* 4187330-pure-nature-hd.jpg */,
+				84F039A21C8CE23300A07836 /* City Wallpaper 14.jpg */,
+				84F039A31C8CE23300A07836 /* Nature-Spring-027.jpg */,
+				84F039A41C8CE23400A07836 /* new-york-city-hd.jpg */,
+				84F039A51C8CE23400A07836 /* Skyline_oklahoma_city.JPG */,
+				84EE4AE11C8C7F09000C593F /* meadow_nature_summer_grass_sky_301_2560x1440.jpg */,
+				84EE4AE21C8C7F09000C593F /* mountains_nature_sky_river_beautiful_scenery_93460_2560x1440.jpg */,
+				84EE4AE31C8C7F09000C593F /* Parc-nature_de_la_Pointe-aux-Prairies_07.jpg */,
+				84EE4AE41C8C7F09000C593F /* puppy_couple_sunset_nature_play_kids_1194_2560x1440.jpg */,
+				84EE4AE51C8C7F09000C593F /* summer_mountains_nature_lake_river_grass_93164_2560x1440.jpg */,
+				84EE4AE61C8C7F09000C593F /* summer_nature_grass_beautiful_light_84335_3840x2160.jpg */,
+				84EE4ADF1C8C7EF1000C593F /* 4239015-images-of-nature.jpg */,
+				84ECBA3A1C8B7C4E0093E7AD /* bcf39e88-5731-43bb-9d4b-e5b3b2b1fdf2.jpg */,
+				84ECBA3B1C8B7C4E0093E7AD /* ca1b8c69-9ba4-4586-a6b7-fe3e6e2112de.jpg */,
+				84ECBA3C1C8B7C4E0093E7AD /* green_mountain_nature_wallpaper_hd.jpg */,
+				84ECBA461C8C60AF0093E7AD /* Icons */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		84ECBA461C8C60AF0093E7AD /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				84ECBA4E1C8C60AF0093E7AD /* windows_7_download_library_ico_by_sdbinwiiexe-d3c9fb7.png */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,7 +325,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84EE4AEC1C8C7F09000C593F /* summer_nature_grass_beautiful_light_84335_3840x2160.jpg in Resources */,
+				84ECBA561C8C60AF0093E7AD /* windows_7_download_library_ico_by_sdbinwiiexe-d3c9fb7.png in Resources */,
+				84ECBA3F1C8B7C4E0093E7AD /* green_mountain_nature_wallpaper_hd.jpg in Resources */,
+				84EE4AEB1C8C7F09000C593F /* summer_mountains_nature_lake_river_grass_93164_2560x1440.jpg in Resources */,
+				84EE4AEA1C8C7F09000C593F /* puppy_couple_sunset_nature_play_kids_1194_2560x1440.jpg in Resources */,
 				84E4C0C71C8A1F21003B9B4C /* LaunchScreen.storyboard in Resources */,
+				84EE4AE81C8C7F09000C593F /* mountains_nature_sky_river_beautiful_scenery_93460_2560x1440.jpg in Resources */,
+				84EE4AE01C8C7EF1000C593F /* 4239015-images-of-nature.jpg in Resources */,
+				84EE4AE71C8C7F09000C593F /* meadow_nature_summer_grass_sky_301_2560x1440.jpg in Resources */,
+				84F039A81C8CE23400A07836 /* Nature-Spring-027.jpg in Resources */,
+				84F039A61C8CE23400A07836 /* 4187330-pure-nature-hd.jpg in Resources */,
+				84F039A71C8CE23400A07836 /* City Wallpaper 14.jpg in Resources */,
+				84F039AA1C8CE23400A07836 /* Skyline_oklahoma_city.JPG in Resources */,
+				84F039A91C8CE23400A07836 /* new-york-city-hd.jpg in Resources */,
+				84ECBA3D1C8B7C4E0093E7AD /* bcf39e88-5731-43bb-9d4b-e5b3b2b1fdf2.jpg in Resources */,
+				84EE4AE91C8C7F09000C593F /* Parc-nature_de_la_Pointe-aux-Prairies_07.jpg in Resources */,
+				84ECBA3E1C8B7C4E0093E7AD /* ca1b8c69-9ba4-4586-a6b7-fe3e6e2112de.jpg in Resources */,
 				84E4C0C41C8A1F21003B9B4C /* Assets.xcassets in Resources */,
 				84E4C0BF1C8A1F21003B9B4C /* Main.storyboard in Resources */,
 			);
@@ -273,7 +368,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84E4C0BC1C8A1F21003B9B4C /* ViewController.m in Sources */,
+				84E4C0EC1C8A2263003B9B4C /* ImagesTableVC.m in Sources */,
+				84E4C0BC1C8A1F21003B9B4C /* ImageViewController.m in Sources */,
+				84E4C0EF1C8A22C4003B9B4C /* ImagesCellVC.m in Sources */,
+				84ECBA391C8B47980093E7AD /* ImagesUrls.m in Sources */,
 				84E4C0B91C8A1F21003B9B4C /* AppDelegate.m in Sources */,
 				84E4C0B61C8A1F21003B9B4C /* main.m in Sources */,
 				84E4C0C21C8A1F21003B9B4C /* Thumnails.xcdatamodeld in Sources */,
@@ -502,6 +600,7 @@
 				84E4C0E31C8A1F21003B9B4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84E4C0E41C8A1F21003B9B4C /* Build configuration list for PBXNativeTarget "ThumnailsTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +609,7 @@
 				84E4C0E61C8A1F21003B9B4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84E4C0E71C8A1F21003B9B4C /* Build configuration list for PBXNativeTarget "ThumnailsUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +618,7 @@
 				84E4C0E91C8A1F21003B9B4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
