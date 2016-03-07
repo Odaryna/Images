@@ -17,6 +17,10 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+    self.navigationItem.leftItemsSupplementBackButton = YES;
+    [self.navigationItem.leftBarButtonItem setTitle:@"Choose image"];
+    
     UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector( scaleImage:)];
     [pinchGestureRecognizer setDelegate:self];
     pinchGestureRecognizer.scale = 1.0f;
@@ -41,7 +45,8 @@
 {
     if (self.fullImage)
     {
-       self.fullImageView.image = self.fullImage;
+        self.fullImageView.image = self.fullImage;
+        self.navigationItem.title = self.nameOfImage;
     }
 }
 

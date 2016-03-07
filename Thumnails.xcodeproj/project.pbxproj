@@ -35,6 +35,11 @@
 		84F039A81C8CE23400A07836 /* Nature-Spring-027.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84F039A31C8CE23300A07836 /* Nature-Spring-027.jpg */; };
 		84F039A91C8CE23400A07836 /* new-york-city-hd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84F039A41C8CE23400A07836 /* new-york-city-hd.jpg */; };
 		84F039AA1C8CE23400A07836 /* Skyline_oklahoma_city.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 84F039A51C8CE23400A07836 /* Skyline_oklahoma_city.JPG */; };
+		84FB28E61C8D0F8700A22DB6 /* 23-Flowers-with-Butterfly-_10150291.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84FB28E11C8D0F8700A22DB6 /* 23-Flowers-with-Butterfly-_10150291.jpg */; };
+		84FB28E71C8D0F8700A22DB6 /* Iceberg,_Greenland_Sea_(js)1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84FB28E21C8D0F8700A22DB6 /* Iceberg,_Greenland_Sea_(js)1.jpg */; };
+		84FB28E81C8D0F8700A22DB6 /* Labrador-sea-paamiut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84FB28E31C8D0F8700A22DB6 /* Labrador-sea-paamiut.jpg */; };
+		84FB28E91C8D0F8700A22DB6 /* purple-flowers-butterflies-wide.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84FB28E41C8D0F8700A22DB6 /* purple-flowers-butterflies-wide.jpg */; };
+		84FB28EA1C8D0F8700A22DB6 /* salton-sea-sra-c2a9greg-lucker.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84FB28E51C8D0F8700A22DB6 /* salton-sea-sra-c2a9greg-lucker.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +99,11 @@
 		84F039A31C8CE23300A07836 /* Nature-Spring-027.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Nature-Spring-027.jpg"; sourceTree = "<group>"; };
 		84F039A41C8CE23400A07836 /* new-york-city-hd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "new-york-city-hd.jpg"; sourceTree = "<group>"; };
 		84F039A51C8CE23400A07836 /* Skyline_oklahoma_city.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Skyline_oklahoma_city.JPG; sourceTree = "<group>"; };
+		84FB28E11C8D0F8700A22DB6 /* 23-Flowers-with-Butterfly-_10150291.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "23-Flowers-with-Butterfly-_10150291.jpg"; sourceTree = "<group>"; };
+		84FB28E21C8D0F8700A22DB6 /* Iceberg,_Greenland_Sea_(js)1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Iceberg,_Greenland_Sea_(js)1.jpg"; sourceTree = "<group>"; };
+		84FB28E31C8D0F8700A22DB6 /* Labrador-sea-paamiut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Labrador-sea-paamiut.jpg"; sourceTree = "<group>"; };
+		84FB28E41C8D0F8700A22DB6 /* purple-flowers-butterflies-wide.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "purple-flowers-butterflies-wide.jpg"; sourceTree = "<group>"; };
+		84FB28E51C8D0F8700A22DB6 /* salton-sea-sra-c2a9greg-lucker.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "salton-sea-sra-c2a9greg-lucker.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +204,11 @@
 		84ECBA0B1C8B40880093E7AD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				84FB28E11C8D0F8700A22DB6 /* 23-Flowers-with-Butterfly-_10150291.jpg */,
+				84FB28E21C8D0F8700A22DB6 /* Iceberg,_Greenland_Sea_(js)1.jpg */,
+				84FB28E31C8D0F8700A22DB6 /* Labrador-sea-paamiut.jpg */,
+				84FB28E41C8D0F8700A22DB6 /* purple-flowers-butterflies-wide.jpg */,
+				84FB28E51C8D0F8700A22DB6 /* salton-sea-sra-c2a9greg-lucker.jpg */,
 				84F039A11C8CE23300A07836 /* 4187330-pure-nature-hd.jpg */,
 				84F039A21C8CE23300A07836 /* City Wallpaper 14.jpg */,
 				84F039A31C8CE23300A07836 /* Nature-Spring-027.jpg */,
@@ -327,16 +342,21 @@
 			files = (
 				84EE4AEC1C8C7F09000C593F /* summer_nature_grass_beautiful_light_84335_3840x2160.jpg in Resources */,
 				84ECBA561C8C60AF0093E7AD /* windows_7_download_library_ico_by_sdbinwiiexe-d3c9fb7.png in Resources */,
+				84FB28E91C8D0F8700A22DB6 /* purple-flowers-butterflies-wide.jpg in Resources */,
 				84ECBA3F1C8B7C4E0093E7AD /* green_mountain_nature_wallpaper_hd.jpg in Resources */,
 				84EE4AEB1C8C7F09000C593F /* summer_mountains_nature_lake_river_grass_93164_2560x1440.jpg in Resources */,
 				84EE4AEA1C8C7F09000C593F /* puppy_couple_sunset_nature_play_kids_1194_2560x1440.jpg in Resources */,
 				84E4C0C71C8A1F21003B9B4C /* LaunchScreen.storyboard in Resources */,
+				84FB28E81C8D0F8700A22DB6 /* Labrador-sea-paamiut.jpg in Resources */,
 				84EE4AE81C8C7F09000C593F /* mountains_nature_sky_river_beautiful_scenery_93460_2560x1440.jpg in Resources */,
 				84EE4AE01C8C7EF1000C593F /* 4239015-images-of-nature.jpg in Resources */,
 				84EE4AE71C8C7F09000C593F /* meadow_nature_summer_grass_sky_301_2560x1440.jpg in Resources */,
+				84FB28EA1C8D0F8700A22DB6 /* salton-sea-sra-c2a9greg-lucker.jpg in Resources */,
 				84F039A81C8CE23400A07836 /* Nature-Spring-027.jpg in Resources */,
+				84FB28E71C8D0F8700A22DB6 /* Iceberg,_Greenland_Sea_(js)1.jpg in Resources */,
 				84F039A61C8CE23400A07836 /* 4187330-pure-nature-hd.jpg in Resources */,
 				84F039A71C8CE23400A07836 /* City Wallpaper 14.jpg in Resources */,
+				84FB28E61C8D0F8700A22DB6 /* 23-Flowers-with-Butterfly-_10150291.jpg in Resources */,
 				84F039AA1C8CE23400A07836 /* Skyline_oklahoma_city.JPG in Resources */,
 				84F039A91C8CE23400A07836 /* new-york-city-hd.jpg in Resources */,
 				84ECBA3D1C8B7C4E0093E7AD /* bcf39e88-5731-43bb-9d4b-e5b3b2b1fdf2.jpg in Resources */,

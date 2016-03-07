@@ -71,7 +71,7 @@
     
     float process = (float)self.receivedBytes/self.totalBytes;
     NSUInteger percents = (NSUInteger)(process*100.0f);
-    NSString *strPercents = [NSString stringWithFormat:@"%lu",percents];
+    NSString *strPercents = [NSString stringWithFormat:@"%lu",(unsigned long)percents];
     [self.progressPercents setText:[strPercents stringByAppendingString: @"%"]];
     [self.progressView setProgress:process animated:YES];
 }
@@ -86,7 +86,7 @@
     }
     
     NSMutableDictionary *mutDict = [dict mutableCopy];
-    [mutDict setObject:self.imageData forKey:[NSString stringWithFormat:@"%lu", self.indexOfRow]];
+    [mutDict setObject:self.imageData forKey:[NSString stringWithFormat:@"%lu", (unsigned long)self.indexOfRow]];
     [[NSUserDefaults standardUserDefaults] setObject:mutDict forKey:@"downloaded_images"];
     
     UIImage *image = [UIImage imageWithData:self.imageData];

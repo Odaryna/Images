@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *fullImageView;
 @property (strong, nonatomic) UIImage *fullImage;
+@property (strong, nonatomic) NSString *nameOfImage;
 
 @end
 

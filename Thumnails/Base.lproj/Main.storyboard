@@ -29,14 +29,16 @@
                             <constraint firstItem="6uS-92-zBr" firstAttribute="bottom" secondItem="huV-EW-YXY" secondAttribute="top" id="maQ-NZ-7HR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Psi-aB-NyV"/>
+                    <navigationItem key="navigationItem" id="Psi-aB-NyV">
+                        <barButtonItem key="backBarButtonItem" title="Select image" id="GS6-UN-o5D"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="fullImageView" destination="6uS-92-zBr" id="nJW-Vz-p3Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rz2-uY-Atj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-280" y="56"/>
+            <point key="canvasLocation" x="252" y="56"/>
         </scene>
         <!--Images-->
         <scene sceneID="Khr-xe-6OX">
@@ -129,7 +131,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Images" id="I87-fO-OVj"/>
                     <connections>
-                        <segue destination="xMQ-BC-nRT" kind="showDetail" identifier="showImage" id="wPD-RC-Auv"/>
+                        <segue destination="4K8-AF-70J" kind="showDetail" identifier="showImage" id="wPD-RC-Auv"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BY7-Yq-aej" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -163,12 +165,30 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <segue destination="5XI-mx-cTA" kind="relationship" relationship="masterViewController" id="Rrk-Bf-ifK"/>
-                        <segue destination="xMQ-BC-nRT" kind="relationship" relationship="detailViewController" id="mu1-gJ-GcC"/>
+                        <segue destination="4K8-AF-70J" kind="relationship" relationship="detailViewController" id="mu1-gJ-GcC"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LkY-oX-aYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-826" y="-275"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="If0-KW-QmD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4K8-AF-70J" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y24-dx-FyR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xMQ-BC-nRT" kind="relationship" relationship="rootViewController" id="cEW-cX-Usz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Al-Rj-WBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-280" y="56"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

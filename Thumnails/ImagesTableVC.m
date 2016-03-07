@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSMutableDictionary *images;
 @property (strong, nonatomic) NSMutableDictionary *oldImages;
 @property (strong, nonatomic) UIImage *selectedImage;
+@property (strong, nonatomic) NSString *selectedImageName;
 
 @property (assign, nonatomic) BOOL shouldCollapseDetailViewController;
 
@@ -58,7 +59,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 15;
+    return 20;
 }
 
 
@@ -71,7 +72,7 @@
         NSArray *keys = [self.oldImages allKeys];
         for (NSString *key in keys)
         {
-            if ([[NSString stringWithFormat:@"%lu",indexPath.row] isEqualToString:key])
+            if ([[NSString stringWithFormat:@"%lu",(long)indexPath.row] isEqualToString:key])
             {
                 cell.imageIsDownloaded = YES;
                 [self.images setObject:[self.oldImages objectForKey:key] forKey:key];
@@ -110,13 +111,14 @@
 {
     self.shouldCollapseDetailViewController = false;
     
-    NSString* key = [NSString stringWithFormat:@"%lu", indexPath.row];
+    NSString* key = [NSString stringWithFormat:@"%lu", (long)indexPath.row];
     NSArray *allKeys = [self.images allKeys];
     
     for (NSString *str in allKeys) {
         if ([str isEqualToString:key])
         {
             self.selectedImage = (UIImage *)[self.images objectForKey:key];
+            self.selectedImageName = [[ImagesUrls sharedInstance] nameForImageByIndex:indexPath.row];
             [self performSegueWithIdentifier:@"showImage" sender:self];
             break;
         }
@@ -126,7 +128,7 @@
 
 -(void)downloadedImage:(UIImage *)image forKey:(NSUInteger)index
 {
-    [self.images setObject:image forKey:[NSString stringWithFormat:@"%lu", index]];
+    [self.images setObject:image forKey:[NSString stringWithFormat:@"%lu", (unsigned long)index]];
     
 }
 
@@ -134,8 +136,10 @@
 {
     if ([segue.identifier isEqualToString:@"showImage"])
     {
-        ImageViewController* ivc = (ImageViewController *)segue.destinationViewController;
+        UINavigationController *destination = segue.destinationViewController;
+        ImageViewController* ivc = (ImageViewController *)destination.visibleViewController;
         ivc.fullImage = self.selectedImage;
+        ivc.nameOfImage = self.selectedImageName;
     }
 }
 
