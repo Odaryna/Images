@@ -23,8 +23,8 @@
 @property (assign, nonatomic) NSUInteger indexOfRow;
 @property (assign, nonatomic) BOOL imageIsDownloaded;
 @property (assign, nonatomic) BOOL imageIsDownloading;
-@property (nonatomic, strong) NSTimer* timerForDownload;
 @property (weak, nonatomic) IBOutlet UILabel *progressPercents;
+
 
 - (IBAction)downloadImage:(UIButton *)sender;
 

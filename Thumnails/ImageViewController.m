@@ -8,9 +8,6 @@
 
 #import "ImageViewController.h"
 
-@interface ImageViewController () <UIGestureRecognizerDelegate>
-@end
-
 @implementation ImageViewController
 
 - (void)viewDidLoad
@@ -19,7 +16,6 @@
     
     self.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
     self.navigationItem.leftItemsSupplementBackButton = YES;
-    [self.navigationItem.leftBarButtonItem setTitle:@"Choose image"];
     
     UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector( scaleImage:)];
     [pinchGestureRecognizer setDelegate:self];

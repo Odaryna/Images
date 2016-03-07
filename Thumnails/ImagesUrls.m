@@ -13,7 +13,6 @@
 @property (nonatomic, strong) NSArray *names;
 @property (nonatomic, strong) NSArray *urls;
 
-
 @end
 
 @implementation ImagesUrls

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImageViewController : UIViewController
+@interface ImageViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *fullImageView;
 @property (strong, nonatomic) UIImage *fullImage;

@@ -29,9 +29,7 @@
                             <constraint firstItem="6uS-92-zBr" firstAttribute="bottom" secondItem="huV-EW-YXY" secondAttribute="top" id="maQ-NZ-7HR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Psi-aB-NyV">
-                        <barButtonItem key="backBarButtonItem" title="Select image" id="GS6-UN-o5D"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Psi-aB-NyV"/>
                     <connections>
                         <outlet property="fullImageView" destination="6uS-92-zBr" id="nJW-Vz-p3Z"/>
                     </connections>

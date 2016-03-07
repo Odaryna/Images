@@ -67,6 +67,11 @@
 {
     ImagesCellVC *cell = (ImagesCellVC *)[tableView dequeueReusableCellWithIdentifier:@"ImagesCell" forIndexPath:indexPath];
     
+    cell.imageName.text = [[ImagesUrls sharedInstance] nameForImageByIndex:indexPath.row];
+    cell.image.image = [UIImage imageNamed:[[ImagesUrls sharedInstance] nameForImageByIndex:indexPath.row]];
+    cell.indexOfRow = indexPath.row;
+    cell.delegateDownload = self;
+    
     if ([self.oldImages count])
     {
         NSArray *keys = [self.oldImages allKeys];
@@ -81,11 +86,6 @@
             }
         }
     }
-    
-    cell.imageName.text = [[ImagesUrls sharedInstance] nameForImageByIndex:indexPath.row];
-    cell.image.image = [UIImage imageNamed:[[ImagesUrls sharedInstance] nameForImageByIndex:indexPath.row]];
-    cell.indexOfRow = indexPath.row;
-    cell.delegateDownload = self;
     
     if (!cell.imageIsDownloading)
     {
@@ -145,7 +145,8 @@
 
 #pragma mark - UISplitViewControllerDelegate
 
-- (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
+- (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController
+{
     return self.shouldCollapseDetailViewController;
 }
 

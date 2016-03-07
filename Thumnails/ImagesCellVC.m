@@ -11,7 +11,6 @@
 
 @interface ImagesCellVC ()
 
-@property (nonatomic, strong) NSURL *urlOfImage;
 @property (nonatomic, strong) NSMutableData *imageData;
 @property (nonatomic, assign) NSUInteger totalBytes;
 @property (nonatomic, assign) NSUInteger receivedBytes;
@@ -84,7 +83,7 @@
     {
         dict = [[NSDictionary alloc]init];
     }
-    
+  
     NSMutableDictionary *mutDict = [dict mutableCopy];
     [mutDict setObject:self.imageData forKey:[NSString stringWithFormat:@"%lu", (unsigned long)self.indexOfRow]];
     [[NSUserDefaults standardUserDefaults] setObject:mutDict forKey:@"downloaded_images"];
@@ -96,7 +95,6 @@
     self.progressView.hidden = YES;
     [self.progressPercents setText:@""];
     self.imageIsDownloading = NO;
-
 
 }
 
