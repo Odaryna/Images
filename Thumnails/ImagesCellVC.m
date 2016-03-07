@@ -12,8 +12,6 @@
 @interface ImagesCellVC ()
 
 @property (nonatomic, strong) NSMutableData *imageData;
-@property (nonatomic, assign) NSUInteger totalBytes;
-@property (nonatomic, assign) NSUInteger receivedBytes;
 
 @end
 

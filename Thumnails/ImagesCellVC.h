@@ -24,7 +24,8 @@
 @property (assign, nonatomic) BOOL imageIsDownloaded;
 @property (assign, nonatomic) BOOL imageIsDownloading;
 @property (weak, nonatomic) IBOutlet UILabel *progressPercents;
-
+@property (nonatomic, assign) NSUInteger totalBytes;
+@property (nonatomic, assign) NSUInteger receivedBytes;
 
 - (IBAction)downloadImage:(UIButton *)sender;
 
