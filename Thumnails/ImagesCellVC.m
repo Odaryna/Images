@@ -12,6 +12,8 @@
 @interface ImagesCellVC ()
 
 @property (nonatomic, strong) NSMutableData *imageData;
+@property (nonatomic, assign) NSUInteger totalBytes;
+@property (nonatomic, assign) NSUInteger receivedBytes;
 
 @end
 
@@ -19,7 +21,7 @@
 
 - (IBAction)downloadImage:(UIButton *)sender
 {
-    if (self.imageIsDownloading)
+  /*  if (self.imageIsDownloading)
     {
         [self.progressPercents setText:@""];
         self.progressView.hidden = YES;
@@ -38,9 +40,16 @@
         self.imageIsDownloading = YES;
         [self.downloadButton setImage:nil forState:UIControlStateNormal];
         [self.downloadButton setTitle:@"⬛️" forState: UIControlStateNormal];
-    }
+    }*/
+    
+    [self.delegateDownload downloadImageForIndexPath:self.indexPathOfRow];
+    
+    NSURL* url = [NSURL URLWithString:[[ImagesUrls sharedInstance] urlForImageByIndex:self.indexPathOfRow.row]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
 }
 
+#pragma mark - NSURLConnectionDataDelegate
 
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
@@ -55,22 +64,19 @@
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-    if (!self.imageIsDownloading)
+    /*if (!self.imageIsDownloading)
     {
         [connection cancel];
         self.imageData = nil;
         self.receivedBytes = 0;
         return;
-    }
+    }*/
     
     [self.imageData appendData:data];
     self.receivedBytes += data.length;
     
     float process = (float)self.receivedBytes/self.totalBytes;
-    NSUInteger percents = (NSUInteger)(process*100.0f);
-    NSString *strPercents = [NSString stringWithFormat:@"%lu",(unsigned long)percents];
-    [self.progressPercents setText:[strPercents stringByAppendingString: @"%"]];
-    [self.progressView setProgress:process animated:YES];
+    [self.delegateDownload progressOfDownloading:process atIndexPath:self.indexPathOfRow];
 }
 
 
@@ -81,25 +87,20 @@
     {
         dict = [[NSDictionary alloc]init];
     }
-  
+    
     NSMutableDictionary *mutDict = [dict mutableCopy];
-    [mutDict setObject:self.imageData forKey:[NSString stringWithFormat:@"%lu", (unsigned long)self.indexOfRow]];
+    [mutDict setObject:self.imageData forKey:[NSString stringWithFormat:@"%lu", (unsigned long)self.indexPathOfRow.row]];
     [[NSUserDefaults standardUserDefaults] setObject:mutDict forKey:@"downloaded_images"];
     
     UIImage *image = [UIImage imageWithData:self.imageData];
-    self.imageIsDownloaded = YES;
-    self.downloadButton.hidden = YES;
-    [self.delegateDownload downloadedImage:image forKey:self.indexOfRow];
-    self.progressView.hidden = YES;
-    [self.progressPercents setText:@""];
-    self.imageIsDownloading = NO;
-
+    [self.delegateDownload downloadedImage:image atIndexPath:self.indexPathOfRow];
 }
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
     NSLog(@"Not loaded image!");
 }
+
 
 
 

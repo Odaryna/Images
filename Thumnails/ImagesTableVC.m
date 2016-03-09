@@ -48,7 +48,6 @@
 
     ImagesUrls *imgUrls = [ImagesUrls sharedInstance];
     [imgUrls createArrayWithNamesAndUrls];
-    
 }
 
 
@@ -69,8 +68,11 @@
     
     cell.imageName.text = [[ImagesUrls sharedInstance] nameForImageByIndex:indexPath.row];
     cell.image.image = [UIImage imageNamed:[[ImagesUrls sharedInstance] nameForImageByIndex:indexPath.row]];
-    cell.indexOfRow = indexPath.row;
+    cell.indexPathOfRow = indexPath;
     cell.delegateDownload = self;
+    cell.downloadButton.hidden = NO;
+    [cell.downloadButton setImage:[UIImage imageNamed:@"windows_7_download_library_ico_by_sdbinwiiexe-d3c9fb7.png"] forState:UIControlStateNormal];
+    cell.progressView.hidden = YES;
     
     if ([self.oldImages count])
     {
@@ -79,29 +81,24 @@
         {
             if ([[NSString stringWithFormat:@"%lu",(long)indexPath.row] isEqualToString:key])
             {
-                cell.imageIsDownloaded = YES;
+                cell.downloadButton.hidden = YES;
                 [self.images setObject:[self.oldImages objectForKey:key] forKey:key];
                 [self.oldImages removeObjectForKey:key];
                 break;
             }
         }
     }
+   
     
-    if (!cell.imageIsDownloading)
-    {
-        [cell.downloadButton setImage:[UIImage imageNamed:@"windows_7_download_library_ico_by_sdbinwiiexe-d3c9fb7.png"] forState:UIControlStateNormal];
-        cell.progressView.hidden = YES;
-    }
-    else
-    {
-        cell.progressView.hidden = NO;
-        [cell.downloadButton setImage:nil forState:UIControlStateNormal];
-        [cell.downloadButton setTitle:@"⬛️" forState: UIControlStateNormal];
-    }
+    NSString* key = [NSString stringWithFormat:@"%lu", (long)indexPath.row];
+    NSArray *allKeys = [self.images allKeys];
     
-    if (cell.imageIsDownloaded)
-    {
-        cell.downloadButton.hidden = YES;
+    for (NSString *str in allKeys) {
+        if ([str isEqualToString:key])
+        {
+            cell.downloadButton.hidden = YES;
+            break;
+        }
     }
     
     return cell;
@@ -123,13 +120,39 @@
             break;
         }
     }
-
 }
 
--(void)downloadedImage:(UIImage *)image forKey:(NSUInteger)index
+
+-(void)downloadImageForIndexPath:(NSIndexPath *)index
 {
-    [self.images setObject:image forKey:[NSString stringWithFormat:@"%lu", (unsigned long)index]];
+    ImagesCellVC *cell = [self.tableView cellForRowAtIndexPath:index];
     
+    cell.progressView.hidden = NO;
+    [cell.progressView setProgress:0.0f];
+    [cell.downloadButton setImage:nil forState:UIControlStateNormal];
+    [cell.downloadButton setTitle:@"⬛️" forState: UIControlStateNormal];
+    
+}
+
+-(void)progressOfDownloading:(float)progress atIndexPath:(NSIndexPath *)index
+{
+    ImagesCellVC *cell = [self.tableView cellForRowAtIndexPath:index];
+    
+    NSUInteger percents = (NSUInteger)(progress*100.0f);
+    NSString *strPercents = [NSString stringWithFormat:@"%lu",(unsigned long)percents];
+    [cell.progressPercents setText:[strPercents stringByAppendingString: @"%"]];
+    [cell.progressView setProgress:progress animated:YES];
+}
+
+-(void)downloadedImage:(UIImage *)image atIndexPath:(NSIndexPath *)index
+{
+    [self.images setObject:image forKey:[NSString stringWithFormat:@"%lu", (unsigned long)index.row]];
+    
+    ImagesCellVC *cell = [self.tableView cellForRowAtIndexPath:index];
+    cell.downloadButton.hidden = YES;
+    cell.progressView.hidden = YES;
+    [cell.progressPercents setText:@""];
+
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -149,6 +172,7 @@
 {
     return self.shouldCollapseDetailViewController;
 }
+
 
 
 @end
