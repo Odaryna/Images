@@ -17,6 +17,7 @@
 @property (strong, nonatomic) NSMutableDictionary *oldImages;
 @property (strong, nonatomic) UIImage *selectedImage;
 @property (strong, nonatomic) NSString *selectedImageName;
+@property (strong, nonatomic) NSMutableArray *downloadingCellsIndexPathes;
 
 @property (assign, nonatomic) BOOL shouldCollapseDetailViewController;
 
@@ -32,6 +33,7 @@
     self.splitViewController.delegate = self;
     
     self.images = [NSMutableDictionary new];
+    self.downloadingCellsIndexPathes = [NSMutableArray new];
     
     NSDictionary *dict = [[NSUserDefaults standardUserDefaults] objectForKey:@"downloaded_images"];
     if (dict)
@@ -93,7 +95,8 @@
     NSString* key = [NSString stringWithFormat:@"%lu", (long)indexPath.row];
     NSArray *allKeys = [self.images allKeys];
     
-    for (NSString *str in allKeys) {
+    for (NSString *str in allKeys)
+    {
         if ([str isEqualToString:key])
         {
             cell.downloadButton.hidden = YES;
@@ -101,6 +104,18 @@
         }
     }
     
+    if ([self.downloadingCellsIndexPathes count])
+    {
+        for (NSIndexPath *downCellIndex in self.downloadingCellsIndexPathes)
+        {
+            if (downCellIndex.row == indexPath.row)
+            {
+                cell.progressView.hidden = NO;
+                break;
+            }
+        }
+    }
+   
     return cell;
 }
 
@@ -131,6 +146,7 @@
     [cell.progressView setProgress:0.0f];
     [cell.downloadButton setImage:nil forState:UIControlStateNormal];
     [cell.downloadButton setTitle:@"⬛️" forState: UIControlStateNormal];
+    [self.downloadingCellsIndexPathes addObject:index];
     
 }
 
@@ -142,6 +158,7 @@
     NSString *strPercents = [NSString stringWithFormat:@"%lu",(unsigned long)percents];
     [cell.progressPercents setText:[strPercents stringByAppendingString: @"%"]];
     [cell.progressView setProgress:progress animated:YES];
+    
 }
 
 -(void)downloadedImage:(UIImage *)image atIndexPath:(NSIndexPath *)index
@@ -152,6 +169,8 @@
     cell.downloadButton.hidden = YES;
     cell.progressView.hidden = YES;
     [cell.progressPercents setText:@""];
+    
+    [self.downloadingCellsIndexPathes removeObject:index];
 
 }
 
