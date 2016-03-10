@@ -74,6 +74,7 @@
     cell.delegateDownload = self;
     cell.downloadButton.hidden = NO;
     [cell.downloadButton setImage:[UIImage imageNamed:@"windows_7_download_library_ico_by_sdbinwiiexe-d3c9fb7.png"] forState:UIControlStateNormal];
+    //[cell.downloadButton setTitle:@"" forState: UIControlStateNormal];
     cell.progressView.hidden = YES;
     
     if ([self.oldImages count])
@@ -90,7 +91,6 @@
             }
         }
     }
-   
     
     NSString* key = [NSString stringWithFormat:@"%lu", (long)indexPath.row];
     NSArray *allKeys = [self.images allKeys];
@@ -137,6 +137,18 @@
     }
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"showImage"])
+    {
+        UINavigationController *destination = segue.destinationViewController;
+        ImageViewController* ivc = (ImageViewController *)destination.visibleViewController;
+        ivc.fullImage = self.selectedImage;
+        ivc.nameOfImage = self.selectedImageName;
+    }
+}
+
+#pragma mark - DownloadedImages
 
 -(void)downloadImageForIndexPath:(NSIndexPath *)index
 {
@@ -171,18 +183,11 @@
     [cell.progressPercents setText:@""];
     
     [self.downloadingCellsIndexPathes removeObject:index];
-
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+-(void)stopDownloadAtIndexPath:(NSIndexPath *)index
 {
-    if ([segue.identifier isEqualToString:@"showImage"])
-    {
-        UINavigationController *destination = segue.destinationViewController;
-        ImageViewController* ivc = (ImageViewController *)destination.visibleViewController;
-        ivc.fullImage = self.selectedImage;
-        ivc.nameOfImage = self.selectedImageName;
-    }
+    [self.downloadingCellsIndexPathes removeObject:index];
 }
 
 #pragma mark - UISplitViewControllerDelegate

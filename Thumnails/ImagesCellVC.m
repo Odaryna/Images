@@ -21,32 +21,22 @@
 
 - (IBAction)downloadImage:(UIButton *)sender
 {
-  /*  if (self.imageIsDownloading)
+    if ([[sender titleForState:UIControlStateNormal] isEqualToString:@"⬛️"])
     {
         [self.progressPercents setText:@""];
         self.progressView.hidden = YES;
-        self.imageIsDownloading = NO;
         [self.downloadButton setImage:[UIImage imageNamed:@"windows_7_download_library_ico_by_sdbinwiiexe-d3c9fb7.png"] forState:UIControlStateNormal];
         [self.downloadButton setTitle:@"" forState: UIControlStateNormal];
     }
     else
     {
-        NSURL* url = [NSURL URLWithString:[[ImagesUrls sharedInstance] urlForImageByIndex:self.indexOfRow]];
+        [self.delegateDownload downloadImageForIndexPath:self.indexPathOfRow];
+        NSURL* url = [NSURL URLWithString:[[ImagesUrls sharedInstance] urlForImageByIndex:self.indexPathOfRow.row]];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
-        
-        self.progressView.hidden = NO;
-        [self.progressView setProgress:0.0f];
-        self.imageIsDownloading = YES;
-        [self.downloadButton setImage:nil forState:UIControlStateNormal];
-        [self.downloadButton setTitle:@"⬛️" forState: UIControlStateNormal];
-    }*/
+    }
     
-    [self.delegateDownload downloadImageForIndexPath:self.indexPathOfRow];
-    
-    NSURL* url = [NSURL URLWithString:[[ImagesUrls sharedInstance] urlForImageByIndex:self.indexPathOfRow.row]];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
+
 }
 
 #pragma mark - NSURLConnectionDataDelegate
@@ -64,13 +54,14 @@
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-    /*if (!self.imageIsDownloading)
+    if ([[self.downloadButton titleForState:UIControlStateNormal] isEqualToString:@""])
     {
         [connection cancel];
         self.imageData = nil;
         self.receivedBytes = 0;
+        [self.delegateDownload stopDownloadAtIndexPath:self.indexPathOfRow];
         return;
-    }*/
+    }
     
     [self.imageData appendData:data];
     self.receivedBytes += data.length;

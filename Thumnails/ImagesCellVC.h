@@ -13,6 +13,7 @@
 -(void)downloadImageForIndexPath:(NSIndexPath *)index;
 -(void)progressOfDownloading:(float)progress atIndexPath:(NSIndexPath *)index;
 -(void)downloadedImage:(UIImage *)image atIndexPath:(NSIndexPath *)index;
+-(void)stopDownloadAtIndexPath:(NSIndexPath *)index;
 
 @end
 
